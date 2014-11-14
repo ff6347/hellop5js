@@ -199,9 +199,26 @@ Enter into the Terminal:
     git remote add origin git@github.com:fabiantheblind/hellop5js.git
     cp bower_components/jquery/dist/jquery.min.js jquery.min.js
     cp bower_components/p5js/lib/p5.min.js p5.min.js
+
+Now you need to change your index.html  
+look for the lines:  
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/p5js/lib/p5.min.js"></script>
+
+and change them to: 
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="p5.min.js"></script>
+
+Why? The `cp` command copies the libriaries to your root level but our index.html still points at the bower_components. But we excluded the bower_components. This is useful because we don't want all the files from the libraries added to our repo. But keep on.  
+
+GO back to the terminal and enter the following lines.
+
     git add -A :/
     git commit -a -m "inital local commit"
     git branch gh-pages
     git push origin master
     git push origin gh-pages
 
+This is it. Point your browser to http://
