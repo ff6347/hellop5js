@@ -25,6 +25,8 @@ You will need to get and install:
 
 You need to learn some basics of the command line interface. We will do this step by step. If you want to speed up things a bit take a look at this great online book. [cli.learncodethehardway.org](http://cli.learncodethehardway.org/book/)  
 
+
+
 ##Client Side p5.js  
 
 Open your Terminal and move to a good place like the Desktop.  
@@ -89,6 +91,8 @@ Then run:
 
     bower install p5js --save
     bower install jquery --save
+
+Actually we dont need jquery. This is just to show you how easy bower makes it to install all kinds of libraries.  
 
 Great. We are nearly there. Now create a file with your favorite text editor with this content.  
 
@@ -162,9 +166,23 @@ and point your browser to this link [http://0.0.0.0:8080/](http://0.0.0.0:8080/)
 To stop the server just hit "CTRL + C".  
 Awesome. You just created your first p5.js sketch with a basic setup for client side Javascript programming. If you want to make this available on the web there are several ways. I recommend these two.  
 
-- Use github  
-- Use your own uberspace.de server  
+- Use your own uberspace.de server (simple way)  
+- Use github (the nerdy cool terminal way)  
 
+###Uberspace  
+
+To put all of this onto your uberspace.de server. You need to  
+
+- create an [uberspace account](https://uberspace.de/register) and follow the instructions.  
+- make sure you [add your email](https://uberspace.de/dashboard/mail) address to the uberspace
+- make sure to add a [ssh password](https://uberspace.de/dashboard/authentication)  
+- connect to the server with a file transfer client like Filezilla or Cyberduck or or or… 
+- Make sure he is capable to use the SFTP protocol.
+- login to your server via SFTP. You can get the server your onto from [this page](https://uberspace.de/dashboard/authentication) in our uberspace dashboard. It is the one under hostname.  
+- Now upload all the files from the "hellop5js" folder into the folder html.  
+- point your browser to your server. e.g. [http://fmz.pictor.uberspace.de/](http://fmz.pictor.uberspace.de/)
+
+If everything went fine and your index.html with all the assets is in the folder "html" you should see your processing sketch online. Congratulations.  
 
 ###Github:  
 
@@ -173,7 +191,7 @@ It should look something like this.
 
 ![](images/new-repo.png)  
 
-Copy the clone url "git@github.com:fabiantheblind/hellop5js.git" to the clipboard
+Copy the clone url "git@github.com:fabiantheblind/hellop5js.git" to the clipboard. This url will of course contain your username not mine.  
 
 go to your terminal and stop the server if it is still running.  
 Now we are going to to do several things:  
@@ -192,13 +210,18 @@ _Note: Most of the commands should work the same on windows and mac. To use git 
 
 Enter into the Terminal:  
 
+__!dont copy paste this type it by your self.__  
+__!Exchange your username__  
+
     git init  
     echo "node_modules" >> .gitignore
     echo "bower_components" >> .gitignore  
     echo "Hello p5.js" >> README.md
     git remote add origin git@github.com:fabiantheblind/hellop5js.git
     cp bower_components/jquery/dist/jquery.min.js jquery.min.js
+    cp bower_components/jquery/dist/jquery.min.map jquery.min.map
     cp bower_components/p5js/lib/p5.min.js p5.min.js
+
 
 Now you need to change your index.html  
 look for the lines:  
@@ -221,4 +244,6 @@ GO back to the terminal and enter the following lines.
     git push origin master
     git push origin gh-pages
 
-This is it. Point your browser to http://
+This is it. Point your browser to http://[YOURUSERNAME].github.io/hellop5js/ (Again make sure to use your username.)
+
+Awesome. You have your first project online.  
