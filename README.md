@@ -27,7 +27,7 @@ You need to learn some basics of the command line interface. We will do this ste
 
 
 
-##Client Side p5.js  
+##Getting Started with Client Side p5.js  
 
 Open your Terminal and move to a good place like the Desktop.  
 
@@ -169,7 +169,7 @@ Awesome. You just created your first p5.js sketch with a basic setup for client 
 - Use your own uberspace.de server (simple way)  
 - Use github (the nerdy cool terminal way)  
 
-###Uberspace  
+###Publish to Uberspace  
 
 To put all of this onto your uberspace.de server. You need to  
 
@@ -180,11 +180,11 @@ To put all of this onto your uberspace.de server. You need to
 - Make sure he is capable to use the SFTP protocol.
 - login to your server via SFTP. You can get the server your onto from [this page](https://uberspace.de/dashboard/authentication) in our uberspace dashboard. It is the one under hostname.  
 - Now upload all the files from the "hellop5js" folder into the folder html.  
-- point your browser to your server. e.g. [http://fmz.pictor.uberspace.de/](http://fmz.pictor.uberspace.de/)
+- point your browser to your server. e.g. [http://fmz.pictor.uberspace.de/](http://fmz.pictor.uberspace.de/) (change the fmz to your username.)
 
 If everything went fine and your index.html with all the assets is in the folder "html" you should see your processing sketch online. Congratulations.  
 
-###Github:  
+###Publish to Github Pages  
 
 create a new repository on github called "hellop5js". Leave it empty. Don't create a .gitignore nor a README.md we will do this by ourselves.  
 It should look something like this.  
@@ -247,3 +247,32 @@ GO back to the terminal and enter the following lines.
 This is it. Point your browser to http://[YOURUSERNAME].github.io/hellop5js/ (Again make sure to use your username.)
 
 Awesome. You have your first project online.  
+
+If you want to use this repo only for your micro website it is useful to set the gh-pages branch as the default. We will delete the master branch completely. Make sure you don't loose any data.  
+
+Go to the settings of your repo. The URL is something like this. https://github.com/ [YOUR USER NAME] /hellop5js/settings and change the default branch to gh-pages.  
+
+![](images/settings.png)  
+
+Back to the terminal in your project folder.  
+
+Switch in to the gh-pages branch if your still in the master.
+
+    git checkout gh-pages
+
+To be sure you don't loose something from the master branch, merge it into the gh-pages branch
+
+    git merge master
+
+Now delete the master branch
+
+    git branch -d master
+
+and also delete it on the server
+
+    git push origin :master
+
+
+##Getting Started with Server Side p5.js  
+
+tbd
