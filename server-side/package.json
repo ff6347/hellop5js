@@ -1,0 +1,29 @@
+{
+  "name": "server-side-p5-js",
+  "version": "0.1.0",
+  "description": "This is an example of using p5 js with server side programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fabiantheblind/hellop5js.git"
+  },
+  "keywords": [
+    "p5",
+    "processing",
+    "creative",
+    "code"
+  ],
+  "author": "fabiantheblind",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabiantheblind/hellop5js/issues"
+  },
+  "homepage": "https://github.com/fabiantheblind/hellop5js",
+  "dependencies": {
+    "p5": "^0.3.11",
+    "servi": "0.0.8"
+  }
+}
