@@ -366,7 +366,7 @@ Now in the terminal run:
 
     node index.js  
 
-And point your browser to http://localhost:3000/ You will see the content of the index.html file. If you want to see the other files just change your URL to http://localhost:3000/other.html and the server will serve the file you are calling.  
+And point your browser to [http://localhost:3000/](http://localhost:3000/) You will see the content of the index.html file. If you want to see the other files just change your URL to [http://localhost:3000/other.html](http://localhost:3000/other.html) and the server will serve the file you are calling.  
 
 Awesome you wrote your own server. You can serve html files with that and do some more complex things. For example you can use templates and databases.   
 
