@@ -217,6 +217,8 @@ If everything went fine and your index.html with all the assets is in the folder
 
 ###Publish to Github Pages  
 
+__pre windows:__ folow this guide [link](http://tech.pro/tutorial/1840/setting-up-git-and-github-from-the-windows-command-prompt) to setup your ssh keys for windows properly.  
+
 create a new repository on github called "hellop5js". Leave it empty. Don't create a .gitignore nor a README.md we will do this by ourselves.  
 It should look something like this.  
 
